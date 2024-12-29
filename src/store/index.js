@@ -122,8 +122,8 @@ export const mainStore = defineStore("main", {
           show: true,
         },
         {
-          label: "36氪",
-          value: "36kr",
+          label: "豆瓣电影",
+          value: "douban-movie",
           order: 19,
           show: true,
         },
