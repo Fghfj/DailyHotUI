@@ -50,7 +50,7 @@ export const mainStore = defineStore("main", {
         {
           label: "AcFun日榜",
           value: "acfun",
-          order: 7,
+          order: 19,
           show: true,
         },
         {
@@ -120,9 +120,9 @@ export const mainStore = defineStore("main", {
           show: true,
         },
         {
-          label: "豆瓣电影",
-          value: "douban-movie",
-          order: 19,
+          label: "36氪",
+          value: "36kr",
+          order: 7,
           show: true,
         },
       ],
