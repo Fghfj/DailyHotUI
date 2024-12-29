@@ -4,8 +4,8 @@
       <div class="logo" @click="router.push('/')">
         <img src="/ico/favicon.png" alt="logo" />
         <div class="name">
-          <n-text>今日热榜</n-text>
-          <n-text :depth="3">汇聚全网热点，热门尽览无余</n-text>
+          <n-text>快新闻</n-text>
+          <n-text :depth="3">看尽全网热榜，热门快人一步</n-text>
         </div>
       </div>
       <div class="current-time" v-if="store.timeData">
