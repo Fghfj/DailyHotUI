@@ -3,7 +3,7 @@ import { defineStore } from "pinia";
 export const mainStore = defineStore("main", {
   state: () => {
     return {
-      siteTheme: "dark",
+      siteTheme: "light",
       newsArr: [
         {
           label: "微博",
