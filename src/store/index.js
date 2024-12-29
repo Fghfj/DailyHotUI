@@ -20,13 +20,13 @@ export const mainStore = defineStore("main", {
         {
           label: "澎湃新闻",
           value: "thepaper",
-          order: 2,
+          order: 3,
           show: true,
         },
         {
           label: "抖音",
           value: "douyin",
-          order: 3,
+          order: 2,
           show: true,
         },
         {
