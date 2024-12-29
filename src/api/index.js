@@ -1,5 +1,6 @@
 import axios from "@/api/request";
 
+
 /**
  * 获取热榜分类数据
  * @param {string} type 热榜分类名称
@@ -9,6 +10,6 @@ import axios from "@/api/request";
 export const getHotLists = (type, isNew) => {
   return axios({
     method: "GET",
-    url: `/${type}`,  // 改成直接用路径，不用 ?type= 参数
+    url: `?type=${type}`,
   });
 };
