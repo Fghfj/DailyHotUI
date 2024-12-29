@@ -18,6 +18,7 @@ axios.defaults.headers = { "Content-Type": "application/json" };
 // 请求拦截
 axios.interceptors.request.use(
   (request) => {
+    // if (request.loadingBar != "Hidden") $loadingBar.start();
     const token = localStorage.getItem("token");
     if (token) {
       request.headers.Authorization = token;
@@ -25,6 +26,7 @@ axios.interceptors.request.use(
     return request;
   },
   (error) => {
+    // $loadingBar.error();
     $message.error("请求失败，请稍后重试");
     return Promise.reject(error);
   }
@@ -33,20 +35,8 @@ axios.interceptors.request.use(
 // 响应拦截
 axios.interceptors.response.use(
   (response) => {
-    const data = response.data;
-    return {
-      code: data.code,
-      title: data.title || data.name,
-      subtitle: data.type || "热搜榜",
-      update_time: new Date(data.updateTime).getTime(),
-      data: data.data.map((item, index) => ({
-        index: index + 1,
-        title: item.title,
-        hot: String(item.hot),
-        url: item.url,
-        mobileUrl: item.mobileUrl || item.url
-      }))
-    };
+    // $loadingBar.finish();
+    return response.data;
   },
   (error) => {
     $loadingBar.error();
@@ -70,7 +60,7 @@ axios.interceptors.response.use(
           break;
       }
     } else {
-      $message.error("请求失败，请稍后重试");
+      $message.error(data.message ? data.message : "请求失败，请稍后重试");
     }
     return Promise.reject(error);
   }
