@@ -50,7 +50,7 @@ export const mainStore = defineStore("main", {
         {
           label: "AcFun日榜",
           value: "acfun",
-          order: 19,
+          order: 7,
           show: true,
         },
         {
@@ -122,7 +122,7 @@ export const mainStore = defineStore("main", {
         {
           label: "36氪",
           value: "36kr",
-          order: 7,
+          order: 19,
           show: true,
         },
       ],
