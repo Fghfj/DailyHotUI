@@ -1,3 +1,4 @@
+
 import { defineStore } from "pinia";
 
 export const mainStore = defineStore("main", {
@@ -146,3 +147,4 @@ export const mainStore = defineStore("main", {
       paths: ["siteTheme", "newsArr", "linkOpenType", "headerFixed"],
     },
   ],
+});
