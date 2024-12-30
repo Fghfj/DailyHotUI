@@ -12,14 +12,14 @@ export const mainStore = defineStore("main", {
           show: true,
         },
         {
-          label: "抖音",
-          value: "douyin",
+          label: "腾讯新闻",
+          value: "tencent",
           order: 1,
           show: true,
         },
         {
-          label: "腾讯新闻",
-          value: "tencent",
+          label: "抖音",
+          value: "douyin",
           order: 2,
           show: true,
         },
